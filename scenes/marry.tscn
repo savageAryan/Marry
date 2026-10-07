@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dqp1vsvkwe658"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtx1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dbnl"]
+
+[node name="marry" type="CharacterBody2D" unique_id=1550564980]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1119963916]
+sprite_frames = SubResource("SpriteFrames_mtx1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112482314]
+shape = SubResource("RectangleShape2D_3dbnl")

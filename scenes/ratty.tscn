@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d4ijb7m1flia5"]
+
+[ext_resource type="Texture2D" uid="uid://dfa78ahtaodq6" path="res://assets/Mask group-2.png" id="1_2ow7y"]
+[ext_resource type="Texture2D" uid="uid://c7m3x73ngytcj" path="res://assets/Mask group-3.png" id="2_c5onf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3uhv"]
+atlas = ExtResource("1_2ow7y")
+region = Rect2(0, 0, 532, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce6xi"]
+atlas = ExtResource("2_c5onf")
+region = Rect2(0, 0, 500, 278)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tysxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3uhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce6xi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w5u4i"]
+radius = 156.17749
+
+[node name="ratty" type="CharacterBody2D" unique_id=199383234]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344340255]
+sprite_frames = SubResource("SpriteFrames_tysxt")
+frame_progress = 0.22238739
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2072952128]
+position = Vector2(49.375015, -30.624992)
+shape = SubResource("CircleShape2D_w5u4i")

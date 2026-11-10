@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bchbrbj4h8gc4"]
+
+[ext_resource type="Texture2D" uid="uid://0wsmq3gqxdll" path="res://assets/Mask group.png" id="1_se5fe"]
+[ext_resource type="Texture2D" uid="uid://q6qwelq6cqtm" path="res://assets/Mask group-1.png" id="2_t8pth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vi38"]
+atlas = ExtResource("1_se5fe")
+region = Rect2(0, 0, 990, 511)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxap7"]
+atlas = ExtResource("2_t8pth")
+region = Rect2(0, 0, 990, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfoj7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vi38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxap7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c5onf"]
+radius = 175.31853
+height = 810.5803
+
+[node name="kitty" type="CharacterBody2D" unique_id=373984600]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=257427775]
+sprite_frames = SubResource("SpriteFrames_pfoj7")
+frame_progress = 0.08932498
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=327647619]
+position = Vector2(77.83307, -2.5107422)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_c5onf")

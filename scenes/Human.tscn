@@ -29,7 +29,7 @@ animations = [{
 radius = 92.53421
 height = 495.86346
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=737580488]
+[node name="Human" type="CharacterBody2D" unique_id=737580488]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1668332973]
 sprite_frames = SubResource("SpriteFrames_vta6w")

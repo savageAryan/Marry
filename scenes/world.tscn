@@ -1,3 +1,36 @@
-[gd_scene format=3 uid="uid://bq4it10plxrhi"]
+[gd_scene format=4 uid="uid://bq4it10plxrhi"]
+
+[ext_resource type="PackedScene" uid="uid://dqp1vsvkwe658" path="res://scenes/marry.tscn" id="1_nnsk1"]
+[ext_resource type="Texture2D" uid="uid://cjdj3u634sngd" path="res://assets/Mask group (5).png" id="2_rwgxs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wyf3"]
+texture = ExtResource("2_rwgxs")
+74:0/size_in_atlas = Vector2i(24, 31)
+74:0/0 = 0
+74:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-186.83696, 42.532013, -183.79897, -215.69795, -1.5189819, -191.39397, 186.837, -206.58395, 186.837, 218.73596, -183.79897, 249.11597)
+50:0/size_in_atlas = Vector2i(24, 31)
+50:0/0 = 0
+50:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-186.83696, 42.532013, -183.79897, -215.69795, -1.5189819, -191.39397, 186.837, -206.58395, 195.95102, 221.77399, -186.83696, 218.73596)
+27:0/size_in_atlas = Vector2i(23, 31)
+27:0/0 = 0
+27:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-186.83696, 42.532013, -183.79897, -215.69795, 186.837, -206.58395, 195.95102, 221.77399, -186.83696, 218.73596)
+0:0/size_in_atlas = Vector2i(27, 31)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-211.14096, 48.608, -214.17896, -218.73596, 211.78659, -205.78456, 220.25497, 233.92596, -211.14096, 230.888)
+
+[sub_resource type="TileSet" id="TileSet_uro1f"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4wyf3")
 
 [node name="world" type="Node2D" unique_id=904525875]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1358082396]
+tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAAA=")
+tile_set = SubResource("TileSet_uro1f")
+
+[node name="marry" parent="." unique_id=1550564980 instance=ExtResource("1_nnsk1")]
+position = Vector2(-454.4851, -31.749695)
+
+[node name="Camera2D" type="Camera2D" parent="marry" unique_id=1656435691]
+position = Vector2(428.74997, -46.250015)
+zoom = Vector2(0.625, 0.625)

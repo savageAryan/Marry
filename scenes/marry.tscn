@@ -1,13 +1,65 @@
 [gd_scene format=3 uid="uid://dqp1vsvkwe658"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mtx1i"]
+[ext_resource type="Texture2D" uid="uid://c1uui4iayoe1j" path="res://assets/Mask group (1).png" id="1_iqfr2"]
+[ext_resource type="Script" uid="uid://d2sqjnj2bqmi7" path="res://scripts/marry.gd" id="1_pe30c"]
+[ext_resource type="Texture2D" uid="uid://cd1u0c0aa2ia6" path="res://assets/Mask group (2).png" id="2_7qtot"]
+[ext_resource type="Texture2D" uid="uid://cbip34iovqgp7" path="res://assets/Mask group (3).png" id="3_cu7b3"]
+[ext_resource type="Texture2D" uid="uid://bnqm18o4ai7as" path="res://assets/Mask group (4).png" id="4_pe30c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dbnl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu7b3"]
+atlas = ExtResource("1_iqfr2")
+region = Rect2(0, 0, 299, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe30c"]
+atlas = ExtResource("2_7qtot")
+region = Rect2(0, 0, 208, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uro1f"]
+atlas = ExtResource("3_cu7b3")
+region = Rect2(0, 0, 276, 511)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uefm"]
+atlas = ExtResource("4_pe30c")
+region = Rect2(0, 0, 279, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtx1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu7b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe30c")
+}],
+"loop": 1,
+"name": &"idel",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uro1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uefm")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mhri"]
+radius = 109.61673
+height = 416.44397
 
 [node name="marry" type="CharacterBody2D" unique_id=1550564980]
+script = ExtResource("1_pe30c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1119963916]
+position = Vector2(-10.000015, -0.44169617)
 sprite_frames = SubResource("SpriteFrames_mtx1i")
+animation = &"walking"
+autoplay = "walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112482314]
-shape = SubResource("RectangleShape2D_3dbnl")
+position = Vector2(-11.902618, -25.922363)
+shape = SubResource("CapsuleShape2D_0mhri")

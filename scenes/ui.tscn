@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cf001y6o18of0"]
+
+[ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="1_nt7q6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlq6p"]
+
+[node name="ui" type="Control" unique_id=313804619]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1757269790]
+sprite_frames = SubResource("SpriteFrames_xlq6p")
+
+[node name="Label" type="Label" parent="." unique_id=1559643968]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -264.0
+offset_top = 18.750008
+offset_right = -107.0
+offset_bottom = 143.75
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.627451, 0, 0.03137255, 1)
+theme_override_colors/font_outline_color = Color(0.80501014, 0.26693133, 0.13079417, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 82
+text = "BLOOD"

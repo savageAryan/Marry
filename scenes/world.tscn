@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dqp1vsvkwe658" path="res://scenes/marry.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://cjdj3u634sngd" path="res://assets/Mask group (5).png" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://cf001y6o18of0" path="res://scenes/ui.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://p43wvb4ugf11" path="res://scenes/Human.tscn" id="4_k0juu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wyf3"]
 texture = ExtResource("2_rwgxs")
@@ -28,9 +30,15 @@ sources/0 = SubResource("TileSetAtlasSource_4wyf3")
 tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAAA=")
 tile_set = SubResource("TileSet_uro1f")
 
-[node name="marry" parent="." unique_id=1550564980 instance=ExtResource("1_nnsk1")]
+[node name="marry" parent="." unique_id=1550564980 groups=["player"] instance=ExtResource("1_nnsk1")]
 position = Vector2(-454.4851, -31.749695)
 
 [node name="Camera2D" type="Camera2D" parent="marry" unique_id=1656435691]
 position = Vector2(428.74997, -46.250015)
 zoom = Vector2(0.625, 0.625)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=882968236]
+
+[node name="ui" parent="CanvasLayer" unique_id=313804619 instance=ExtResource("3_4wyf3")]
+
+[node name="Human" parent="." unique_id=737580488 instance=ExtResource("4_k0juu")]

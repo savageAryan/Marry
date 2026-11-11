@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ysl3oi0xk0yl" path="res://assets/frame1.png" id="1_77oia"]
 [ext_resource type="Script" uid="uid://dc2khfxik2qql" path="res://scenes/human.gd" id="1_i3t7p"]
 [ext_resource type="Texture2D" uid="uid://d0ahgxnv77byu" path="res://assets/frame2.png" id="2_i3t7p"]
+[ext_resource type="Animation" uid="uid://cpf4npmtsnwln" path="res://death.res" id="4_0mhri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52w7r"]
 atlas = ExtResource("1_77oia")
@@ -27,7 +28,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pc2h"]
-radius = 88.78421
+radius = 51.28421
 height = 405.86365
 
 [sub_resource type="Animation" id="Animation_i3t7p"]
@@ -69,49 +70,10 @@ tracks/2/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_0mhri"]
-resource_name = "death"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333338, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.212930168743308, 0.21293017]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2666667, 0.56666666, 0.93333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.165, 1.165), Vector2(1.14, -0.325), Vector2(1.105, -1.12)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.53333336, 0.93333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(28.94, -60), Vector2(0, 58.694), Vector2(0, 500)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_62cmq"]
 _data = {
 &"RESET": SubResource("Animation_i3t7p"),
-&"death": SubResource("Animation_0mhri")
+&"death": ExtResource("4_0mhri")
 }
 
 [node name="Human" type="CharacterBody2D" unique_id=737580488]

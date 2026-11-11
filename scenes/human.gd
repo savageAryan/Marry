@@ -7,7 +7,7 @@ var marry = null
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var state = states.roam
-enum states {idel,running,roam
+enum states {dead,running,roam
 }
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -17,6 +17,12 @@ func _physics_process(delta: float) -> void:
 			roam()
 		states.running:
 			run()
+		states.dead:
+			dead()
+func dead():
+	animation_player.play("death")
+	await animation_player.animation_finished
+	queue_free()
 func run():
 	pass
 func roam():
@@ -25,7 +31,5 @@ func roam():
 	if distance < 400:
 		print("lol")
 		if Input.is_action_just_pressed("ui_accept"):
-			animation_player.play("death")
-			await get_tree().create_timer(5).timeout
-			get_tree().queue_delete(self)
+			dead()
 	else: print("sabe")

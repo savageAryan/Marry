@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://due15t8ik7hjw"]
+
+[ext_resource type="Texture2D" uid="uid://t2lirdigrp8a" path="res://assets/title.png" id="1_uyutr"]
+
+[node name="death screen" type="Control" unique_id=1777731316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=804650850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1035078593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2627451, 0, 0.015686275, 0.34509805)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1391221445]
+modulate = Color(1, 1, 1, 0.3372549)
+layout_mode = 0
+offset_left = 268.75006
+offset_top = 6.2500076
+offset_right = 879.50244
+offset_bottom = 387.49994
+texture = ExtResource("1_uyutr")
+expand_mode = 1

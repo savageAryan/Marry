@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bq4it10plxrhi"]
 
+[ext_resource type="Script" uid="uid://cmqhf0ejj1sf1" path="res://scripts/world.gd" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://dqp1vsvkwe658" path="res://scenes/marry.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://cjdj3u634sngd" path="res://assets/Mask group (5).png" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cf001y6o18of0" path="res://scenes/ui.tscn" id="3_4wyf3"]
@@ -24,10 +25,13 @@ texture = ExtResource("2_rwgxs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4wyf3")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0juu"]
+
 [node name="world" type="Node2D" unique_id=904525875]
+script = ExtResource("1_71j4m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1358082396]
-tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAAA=")
+tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAACQABgAAAAbAAAAAACnABgAAAAyAAAAAAC/ABgAAAAyAAAAAADXABgAAAAyAAAAAADvABgAAABKAAAAAAAqARgAAAAAAAAAAABDARgAAAAbAAAAAABaARgAAAAyAAAAAABxARgAAAAbAAAAAACIARgAAAAyAAAAAACfARkAAAAbAAAAAAC2ARkAAAAyAAAAAAA=")
 tile_set = SubResource("TileSet_uro1f")
 
 [node name="marry" parent="." unique_id=1550564980 groups=["player"] instance=ExtResource("1_nnsk1")]
@@ -36,9 +40,22 @@ position = Vector2(-454.4851, -31.749695)
 [node name="Camera2D" type="Camera2D" parent="marry" unique_id=1656435691]
 position = Vector2(428.74997, -46.250015)
 zoom = Vector2(0.625, 0.625)
+limit_left = -1000
+limit_top = -1000
+limit_bottom = 400
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=882968236]
 
 [node name="ui" parent="CanvasLayer" unique_id=313804619 instance=ExtResource("3_4wyf3")]
 
 [node name="Human" parent="." unique_id=737580488 instance=ExtResource("4_k0juu")]
+
+[node name="death" type="Area2D" parent="." unique_id=1312112470]
+position = Vector2(4286.5234, 426.8263)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death" unique_id=766999981]
+position = Vector2(32.51465, 577.0942)
+scale = Vector2(54.067177, 18.463194)
+shape = SubResource("WorldBoundaryShape2D_k0juu")
+
+[connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]

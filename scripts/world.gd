@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_death_body_entered(body: Node2D) -> void:
-	queue_free()
+	if body.is_in_group("player"):
+		queue_free()

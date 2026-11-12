@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d4ijb7m1flia5"]
 
 [ext_resource type="Texture2D" uid="uid://dfa78ahtaodq6" path="res://assets/Mask group-2.png" id="1_2ow7y"]
+[ext_resource type="Script" uid="uid://dc2khfxik2qql" path="res://scenes/human.gd" id="1_f3uhv"]
 [ext_resource type="Texture2D" uid="uid://c7m3x73ngytcj" path="res://assets/Mask group-3.png" id="2_c5onf"]
+[ext_resource type="Animation" uid="uid://cpf4npmtsnwln" path="res://death.res" id="3_c5onf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f3uhv"]
 atlas = ExtResource("1_2ow7y")
@@ -25,15 +27,27 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w5u4i"]
-radius = 156.17749
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxap7"]
+radius = 57.15284
+height = 296.80545
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3uhv"]
+_data = {
+&"death": ExtResource("3_c5onf")
+}
 
 [node name="ratty" type="CharacterBody2D" unique_id=199383234]
+scale = Vector2(0.285, 0.285)
+script = ExtResource("1_f3uhv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344340255]
 sprite_frames = SubResource("SpriteFrames_tysxt")
+autoplay = "default"
 frame_progress = 0.22238739
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2072952128]
-position = Vector2(49.375015, -30.624992)
-shape = SubResource("CircleShape2D_w5u4i")
+position = Vector2(42.847237, -105.90277)
+shape = SubResource("CapsuleShape2D_cxap7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=611634914]
+libraries/death = SubResource("AnimationLibrary_f3uhv")

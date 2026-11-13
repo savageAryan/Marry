@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://due15t8ik7hjw"]
 
+[ext_resource type="Script" uid="uid://c0gurdp8lpji1" path="res://scripts/death_screen.gd" id="1_mqh5l"]
 [ext_resource type="Texture2D" uid="uid://t2lirdigrp8a" path="res://assets/title.png" id="1_uyutr"]
+[ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="2_dwo6e"]
 
 [node name="death screen" type="Control" unique_id=1777731316]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mqh5l")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=804650850]
 layout_mode = 1
@@ -37,3 +40,21 @@ offset_right = 879.50244
 offset_bottom = 387.49994
 texture = ExtResource("1_uyutr")
 expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1286131899]
+layout_mode = 0
+offset_left = 353.74994
+offset_top = 441.25006
+offset_right = 829.74994
+offset_bottom = 535.25006
+theme_override_colors/font_color = Color(0.627451, 0.12156863, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.61984926, 0.21246612, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8243868, 0.5212704, 0.41599327, 1)
+theme_override_colors/font_outline_color = Color(0.44705883, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_dwo6e")
+theme_override_font_sizes/font_size = 56
+text = "HEhe! nEveR Miind!"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

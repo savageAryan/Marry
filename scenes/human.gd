@@ -43,7 +43,7 @@ func run(delta):
 	if direction.x < 0:
 		animated_sprite_2d.flip_h = true
 	velocity.x = direction.x * running_speed
-	if global_position.distance_to(marry.global_position) > 700:
+	if global_position.distance_to(marry.global_position) > 3700:
 		find_target()
 	if Input.is_action_just_pressed("enter"):
 		state = states.dead
@@ -69,7 +69,7 @@ func roam(delta):
 	if distance < 400:
 		state = states.running
 		velocity = direction * 5
-	if global_position.distance_to(target) < 650:
+	if global_position.distance_to(target) < 150:
 		velocity = Vector2.ZERO
 		find_target()
 		print("reachedddd dkjdkk")

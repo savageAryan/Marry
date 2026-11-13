@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://4efpaamvqkw7"]
 
 [ext_resource type="Texture2D" uid="uid://t2lirdigrp8a" path="res://assets/title.png" id="1_5mbse"]
+[ext_resource type="Script" uid="uid://ir87op5p7no3" path="res://scripts/mainmenu.gd" id="1_natt5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w7kh3"]
+load_path = "res://.godot/imported/Mask group (6).png-608155259d85dc54335898da45662ce2.ctex"
 
 [node name="mainmenu" type="Control" unique_id=125857265]
 layout_mode = 3
@@ -9,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_natt5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1696151857]
 layout_mode = 1
@@ -17,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.36176687, 0.38347918, 0.43376997, 1)
+color = Color(0.433163, 0.001166545, 9.62615e-08, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1322977053]
@@ -28,3 +33,22 @@ offset_right = 6002.8447
 offset_bottom = 3034.059
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("1_5mbse")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=367155348]
+layout_mode = 0
+offset_left = 264.0901
+offset_top = 390.4762
+offset_right = 2178.09
+offset_bottom = 802.4762
+scale = Vector2(0.38, 0.38)
+texture_normal = SubResource("CompressedTexture2D_w7kh3")
+stretch_mode = 0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=269971374]
+color = Color(1, 0.7487245, 0.7141514, 1)
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

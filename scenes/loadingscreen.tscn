@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://b0yyu6ofek1rc"]
+
+[ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="1_jy0q2"]
+[ext_resource type="Script" uid="uid://dqfv71klc5rdw" path="res://scripts/loadingscreen.gd" id="1_kodxk"]
+
+[sub_resource type="Animation" id="Animation_jy0q2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(343.74994, 243.74997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(468.875, 270)]
+}
+
+[sub_resource type="Animation" id="Animation_kodxk"]
+resource_name = "new_animation"
+length = 3.995
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.3666666, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(608.74994, 248.74997), Vector2(800, 248.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666663, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.13333334, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(468.965, 313.015), Vector2(468.875, 270)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lol54"]
+_data = {
+&"RESET": SubResource("Animation_jy0q2"),
+&"new_animation": SubResource("Animation_kodxk")
+}
+
+[node name="loadingscreen" type="Control" unique_id=1718975106]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kodxk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=278312911]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1270321441]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 34.25
+offset_top = -64.75
+offset_right = 198.25
+offset_bottom = 52.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_jy0q2")
+theme_override_font_sizes/font_size = 76
+text = "MARRY"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=243927791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 343.74994
+offset_top = 243.74997
+offset_right = -540.6954
+offset_bottom = -253.74997
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=652092609]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 586.24994
+offset_top = 246.24997
+offset_right = -561.94586
+offset_bottom = -251.24997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1012496357]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.125
+offset_top = -54.0
+offset_right = -14.124878
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_jy0q2")
+theme_override_font_sizes/font_size = 31
+text = "Bonta
+Produces"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=255107684]
+libraries/ = SubResource("AnimationLibrary_lol54")

@@ -27,9 +27,8 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxap7"]
-radius = 57.15284
-height = 296.80545
+[sub_resource type="CircleShape2D" id="CircleShape2D_i7141"]
+radius = 98.90175
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f3uhv"]
 _data = {
@@ -37,7 +36,8 @@ _data = {
 }
 
 [node name="ratty" type="CharacterBody2D" unique_id=199383234]
-scale = Vector2(0.285, 0.285)
+scale = Vector2(0.28, 0.28)
+collision_layer = 4
 script = ExtResource("1_f3uhv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344340255]
@@ -46,8 +46,8 @@ autoplay = "default"
 frame_progress = 0.22238739
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2072952128]
-position = Vector2(42.847237, -105.90277)
-shape = SubResource("CapsuleShape2D_cxap7")
+position = Vector2(47.311523, -30.009918)
+shape = SubResource("CircleShape2D_i7141")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=611634914]
 libraries/death = SubResource("AnimationLibrary_f3uhv")

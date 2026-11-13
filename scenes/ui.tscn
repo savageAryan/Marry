@@ -1,8 +1,70 @@
 [gd_scene format=3 uid="uid://cf001y6o18of0"]
 
 [ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://c2qm7x84cccrj" path="res://scripts/ui.gd" id="1_x4jx1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xlq6p"]
+
+[sub_resource type="Animation" id="Animation_x4jx1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bloodamount:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.36, 1.36)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bloodamount:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1063.25, 2.5000095)]
+}
+
+[sub_resource type="Animation" id="Animation_yev5y"]
+resource_name = "new_animation"
+length = 0.565
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bloodamount:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.36, 1.36), Vector2(2.045, 2.045), Vector2(1.36, 1.36)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bloodamount:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1063.25, 2.5000095), Vector2(1062.255, -23.58), Vector2(1062.255, 0.565)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gdt2y"]
+_data = {
+&"RESET": SubResource("Animation_x4jx1"),
+&"new_animation": SubResource("Animation_yev5y")
+}
 
 [node name="ui" type="Control" unique_id=313804619]
 layout_mode = 3
@@ -11,6 +73,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_x4jx1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1757269790]
 sprite_frames = SubResource("SpriteFrames_xlq6p")
@@ -30,4 +93,25 @@ theme_override_colors/font_outline_color = Color(0.80501014, 0.26693133, 0.13079
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 82
-text = "BLOOD"
+text = "BLOOD  X"
+
+[node name="bloodamount" type="Label" parent="." unique_id=1381895191]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.75
+offset_top = 2.5000095
+offset_right = -36.75
+offset_bottom = 127.50001
+grow_horizontal = 0
+scale = Vector2(1.36, 1.36)
+theme_override_colors/font_color = Color(0.627451, 0, 0.03137255, 1)
+theme_override_colors/font_outline_color = Color(0.80501014, 0.26693133, 0.13079417, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 82
+text = "0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=532648946]
+libraries/ = SubResource("AnimationLibrary_gdt2y")

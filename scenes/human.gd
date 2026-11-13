@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-
+signal dying
 var marry = null
 @export var player: CharacterBody2D
 var SPEED = 300.0
@@ -30,8 +30,9 @@ func dead():
 		return
 	died = true
 	velocity = Vector2.ZERO
-	animation_player.play("death")
-	await animation_player.animation_finished
+	Gamemanager.blood += 1
+	print(Gamemanager.blood)
+	dying.emit()
 	print('killili')
 	queue_free()
 func run(delta):
@@ -68,7 +69,7 @@ func roam(delta):
 	if distance < 400:
 		state = states.running
 		velocity = direction * 5
-	if global_position.distance_to(target) < 150:
+	if global_position.distance_to(target) < 650:
 		velocity = Vector2.ZERO
 		find_target()
 		print("reachedddd dkjdkk")

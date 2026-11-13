@@ -29,7 +29,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pc2h"]
 radius = 87.53421
-height = 650.0685
+height = 339.85413
 
 [sub_resource type="Animation" id="Animation_i3t7p"]
 length = 0.001
@@ -77,6 +77,7 @@ _data = {
 }
 
 [node name="Human" type="CharacterBody2D" unique_id=737580488]
+collision_layer = 2
 script = ExtResource("1_i3t7p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1668332973]
@@ -85,7 +86,7 @@ autoplay = "default"
 frame_progress = 0.9853795
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=191882067]
-position = Vector2(-18.71576, -148.21976)
+position = Vector2(-19.96576, -21.969742)
 shape = SubResource("CapsuleShape2D_4pc2h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1050977441]

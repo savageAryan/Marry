@@ -38,6 +38,8 @@ _data = {
 
 [node name="kitty" type="CharacterBody2D" unique_id=373984600]
 scale = Vector2(0.435, 0.435)
+collision_layer = 8
+collision_mask = 17
 script = ExtResource("1_7vi38")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=257427775]

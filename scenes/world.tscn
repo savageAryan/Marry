@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dxnhhn3yf0lhy" path="res://assets/cloud2.png" id="8_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://dms4bawiltkqg" path="res://assets/cloud3.png" id="9_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://p4650mwojya4" path="res://assets/cloud1.png" id="10_w7kh3"]
+[ext_resource type="AudioStream" uid="uid://ino3bqpsul6l" path="res://audio/ElevenLabs_Eerie_piano_notes_played_in_a_slow,_haunting_cadence,_resonating_with_sadness.mp3" id="11_e3hyu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3hyu"]
 atlas = ExtResource("8_7r4gi")
@@ -78,6 +79,9 @@ sources/0 = SubResource("TileSetAtlasSource_4wyf3")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0juu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7kh3"]
+size = Vector2(179.70825, 554.3994)
+
 [node name="world" type="Node2D" unique_id=904525875]
 script = ExtResource("1_71j4m")
 
@@ -135,7 +139,7 @@ rotation = 0.17594242
 sprite_frames = SubResource("SpriteFrames_jhx03")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1358082396]
-tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAACQABgAAAAbAAAAAACnABgAAAAyAAAAAAC/ABgAAAAyAAAAAADXABgAAAAyAAAAAADvABgAAABKAAAAAAAqARgAAAAAAAAAAABDARgAAAAbAAAAAABaARgAAAAyAAAAAABxARgAAAAbAAAAAACIARgAAAAyAAAAAACfARkAAAAbAAAAAAC2ARkAAAAyAAAAAADNARkAAAAbAAAAAADkARkAAAAyAAAAAAD7ARoAAAAbAAAAAAASAhoAAAAyAAAAAAApAhsAAAAbAAAAAABAAhsAAAAyAAAAAABXAhsAAAAbAAAAAABuAhsAAAAyAAAAAACGAhsAAABKAAAAAADG/xYAAAAAAAAAAAC+AhwAAAAAAAAAAADXAhwAAAAbAAAAAADuAhwAAAAyAAAAAAAFAxwAAAAbAAAAAAAcAxwAAAAyAAAAAAAzAx0AAAAbAAAAAABKAx0AAAAyAAAAAABiAx0AAAAyAAAAAAB5Ax0AAABKAAAAAAA=")
+tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAACQABgAAAAbAAAAAACnABgAAAAyAAAAAAC/ABgAAAAyAAAAAADXABgAAAAyAAAAAADvABgAAABKAAAAAAAqARgAAAAAAAAAAABDARgAAAAbAAAAAABaARgAAAAyAAAAAABxARgAAAAbAAAAAACIARgAAAAyAAAAAACfARkAAAAbAAAAAAC2ARkAAAAyAAAAAADNARkAAAAbAAAAAADkARkAAAAyAAAAAAD7ARoAAAAbAAAAAAASAhoAAAAyAAAAAAApAhsAAAAbAAAAAABAAhsAAAAyAAAAAABXAhsAAAAbAAAAAABuAhsAAAAyAAAAAACGAhsAAABKAAAAAADG/xYAAAAAAAAAAAC+AhwAAAAAAAAAAADXAhwAAAAbAAAAAADuAhwAAAAyAAAAAAAFAxwAAAAbAAAAAAAcAxwAAAAyAAAAAAAzAx0AAAAbAAAAAABKAx0AAAAyAAAAAABiAx0AAAAyAAAAAAB5Ax0AAABKAAAAAACrAx0AAAAAAAAAAADEAx0AAAAbAAAAAADbAx0AAAAyAAAAAADzAx0AAAAyAAAAAAAKBB4AAAAbAAAAAAAhBB8AAAAbAAAAAAA4BB8AAAAyAAAAAABPBB8AAAAbAAAAAABmBB8AAAAyAAAAAAB9BCAAAAAbAAAAAACUBCAAAAAyAAAAAACrBCEAAAAbAAAAAADCBCEAAAAbAAAAAADZBCIAAAAbAAAAAADwBCIAAAAyAAAAAAAHBSMAAAAbAAAAAAAeBSMAAAAyAAAAAAA2BSMAAABKAAAAAABkBSQAAAAAAAAAAAB9BSQAAAAbAAAAAACUBSQAAAAyAAAAAACrBSQAAAAbAAAAAADCBSQAAAAyAAAAAADZBSUAAAAbAAAAAADwBSUAAAAyAAAAAAAHBiUAAAAbAAAAAAAeBiUAAAAyAAAAAAA2BiUAAABKAAAAAAA=")
 tile_set = SubResource("TileSet_uro1f")
 
 [node name="marry" parent="." unique_id=1550564980 groups=["player"] instance=ExtResource("1_nnsk1")]
@@ -162,6 +166,66 @@ collision_layer = 4
 position = Vector2(1032.9059, 138.42017)
 collision_layer = 8
 
+[node name="Human2" parent="." unique_id=1397373150 instance=ExtResource("4_k0juu")]
+
+[node name="kitty2" parent="." unique_id=1004447449 instance=ExtResource("6_qfnet")]
+position = Vector2(6938.7207, 90.34827)
+collision_layer = 4
+
+[node name="ratty2" parent="." unique_id=2026456656 instance=ExtResource("7_i7141")]
+position = Vector2(7479.6714, 113.03931)
+collision_layer = 8
+
+[node name="Human3" parent="." unique_id=1845958585 instance=ExtResource("4_k0juu")]
+
+[node name="kitty3" parent="." unique_id=452037018 instance=ExtResource("6_qfnet")]
+position = Vector2(8715.389, 90.34827)
+collision_layer = 4
+
+[node name="ratty3" parent="." unique_id=83714786 instance=ExtResource("7_i7141")]
+position = Vector2(9256.34, 113.03931)
+collision_layer = 8
+
+[node name="Human4" parent="." unique_id=1573720126 instance=ExtResource("4_k0juu")]
+
+[node name="kitty4" parent="." unique_id=1567436795 instance=ExtResource("6_qfnet")]
+position = Vector2(12281.415, 90.34802)
+collision_layer = 4
+
+[node name="ratty4" parent="." unique_id=413523482 instance=ExtResource("7_i7141")]
+position = Vector2(12822.366, 113.03906)
+collision_layer = 8
+
+[node name="Human5" parent="." unique_id=1987140981 instance=ExtResource("4_k0juu")]
+
+[node name="kitty5" parent="." unique_id=1482489077 instance=ExtResource("6_qfnet")]
+position = Vector2(16748.465, 77.65759)
+collision_layer = 4
+
+[node name="ratty5" parent="." unique_id=230555415 instance=ExtResource("7_i7141")]
+position = Vector2(17289.418, 100.34863)
+collision_layer = 8
+
+[node name="Human6" parent="." unique_id=916141263 instance=ExtResource("4_k0juu")]
+
+[node name="kitty6" parent="." unique_id=917670315 instance=ExtResource("6_qfnet")]
+position = Vector2(19832.25, 191.87195)
+collision_layer = 4
+
+[node name="ratty6" parent="." unique_id=1380803103 instance=ExtResource("7_i7141")]
+position = Vector2(20373.203, 214.56299)
+collision_layer = 8
+
+[node name="Human7" parent="." unique_id=1839697133 instance=ExtResource("4_k0juu")]
+
+[node name="kitty7" parent="." unique_id=1629245448 instance=ExtResource("6_qfnet")]
+position = Vector2(23423.656, 179.18152)
+collision_layer = 4
+
+[node name="ratty7" parent="." unique_id=565977447 instance=ExtResource("7_i7141")]
+position = Vector2(23964.61, 201.87256)
+collision_layer = 8
+
 [node name="death" type="Area2D" parent="." unique_id=1312112470]
 position = Vector2(4286.5234, 426.8263)
 
@@ -170,7 +234,119 @@ position = Vector2(32.51465, 577.0942)
 scale = Vector2(54.067177, 18.463194)
 shape = SubResource("WorldBoundaryShape2D_k0juu")
 
+[node name="collisions" type="Node2D" parent="." unique_id=718957518]
+
+[node name="blocker" type="StaticBody2D" parent="collisions" unique_id=159474075]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker" unique_id=539923655]
+position = Vector2(-1149.3934, -125.456604)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker2" type="StaticBody2D" parent="collisions" unique_id=1214399763]
+position = Vector2(4031.446, -76.828)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker2" unique_id=1875666470]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker3" type="StaticBody2D" parent="collisions" unique_id=344411820]
+position = Vector2(4492.414, -84.91516)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker3" unique_id=808048066]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker4" type="StaticBody2D" parent="collisions" unique_id=263517898]
+position = Vector2(10577.998, -28.305054)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker4" unique_id=1572232376]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker5" type="StaticBody2D" parent="collisions" unique_id=664058435]
+position = Vector2(11034.922, -32.348633)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker5" unique_id=394108934]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker6" type="StaticBody2D" parent="collisions" unique_id=1532712270]
+position = Vector2(14443.657, -0.00012207031)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker6" unique_id=782846404]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker7" type="StaticBody2D" parent="collisions" unique_id=1770632242]
+position = Vector2(14799.492, -20.218018)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker7" unique_id=1833241229]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker8" type="StaticBody2D" parent="collisions" unique_id=373381005]
+position = Vector2(21564.396, 101.089355)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker8" unique_id=267848662]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker9" type="StaticBody2D" parent="collisions" unique_id=2085308527]
+position = Vector2(21851.49, 93.0022)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker9" unique_id=98351378]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="blocker10" type="StaticBody2D" parent="collisions" unique_id=1019564827]
+position = Vector2(25676.713, 129.39441)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/blocker10" unique_id=702388299]
+position = Vector2(3.0264893, 3.9379272)
+shape = SubResource("RectangleShape2D_w7kh3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1238885242]
+stream = ExtResource("11_e3hyu")
+
 [connection signal="dying" from="Human" to="." method="_on_human_dying"]
 [connection signal="dying" from="kitty" to="." method="_on_kitty_dying"]
 [connection signal="dying" from="ratty" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human2" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty2" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty2" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human3" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty3" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty3" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human4" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty4" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty4" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human5" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty5" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty5" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human6" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty6" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty6" to="." method="_on_ratty_dying"]
+[connection signal="dying" from="Human7" to="." method="_on_human_dying"]
+[connection signal="dying" from="kitty7" to="." method="_on_kitty_dying"]
+[connection signal="dying" from="ratty7" to="." method="_on_ratty_dying"]
 [connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]

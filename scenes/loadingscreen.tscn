@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="1_jy0q2"]
 [ext_resource type="Script" uid="uid://dqfv71klc5rdw" path="res://scripts/loadingscreen.gd" id="1_kodxk"]
+[ext_resource type="AudioStream" uid="uid://bgcqq3bfl03j1" path="res://audio/title_for_horror_gam_#4-1794638102833.mp3" id="3_lol54"]
 
 [sub_resource type="Animation" id="Animation_jy0q2"]
 length = 0.001
@@ -44,7 +45,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_kodxk"]
 resource_name = "new_animation"
-length = 3.995
+length = 8.69
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -80,6 +81,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(468.965, 313.015), Vector2(468.875, 270)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"audio"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lol54"]
@@ -130,7 +145,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 343.74994
 offset_top = 243.74997
-offset_right = -540.6954
+offset_right = -540.69476
 offset_bottom = -253.74997
 grow_horizontal = 2
 grow_vertical = 2
@@ -157,7 +172,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -107.125
 offset_top = -54.0
-offset_right = -14.124878
+offset_right = -14.125
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -168,3 +183,6 @@ Produces"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=255107684]
 libraries/ = SubResource("AnimationLibrary_lol54")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=905700473]
+stream = ExtResource("3_lol54")

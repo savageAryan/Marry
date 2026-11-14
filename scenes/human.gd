@@ -25,10 +25,34 @@ func _physics_process(delta: float) -> void:
 			run(delta)
 		states.dead:
 			dead()
+
+#here use ai , not to generate code but to debug and get the idea as all enemies were dying at the same time
+func find_nearest_kill():
+	var smallest_dis = INF
+	var closekill = null
+	
+	var kills = get_tree().get_nodes_in_group("kills")
+	for kill in kills:
+		if !is_instance_valid(kill):
+			continue
+		
+		var distance = marry.global_position.distance_to(kill.global_position)
+		if distance < smallest_dis:
+			smallest_dis = distance
+			closekill = kill
+			
+	for kill in kills:
+		if is_instance_valid(kill):
+			kill.get_node("AnimatedSprite2D").modulate = Color(1.0, 1, 1, 1.0)
+		if closekill != null:
+			kill.get_node("AnimatedSprite2D").modulate = Color(0.911, 0.0, 0.0, 1.0)
+			
+	return closekill
 func dead():
 	if died:
 		return
 	died = true
+	remove_from_group("kills")
 	velocity = Vector2.ZERO
 	Gamemanager.blood += 1
 	print(Gamemanager.blood)
@@ -45,8 +69,13 @@ func run(delta):
 	velocity.x = direction.x * running_speed
 	if global_position.distance_to(marry.global_position) > 3700:
 		find_target()
-	if Input.is_action_just_pressed("enter"):
-		state = states.dead
+	if global_position.distance_to(marry.global_position) < 1200:
+		if Input.is_action_just_pressed("enter"):
+			var closest = find_nearest_kill()
+			if closest == self:
+				state = states.dead
+	else:
+		find_target()
 	move_and_slide()
 func find_target():
 	target = global_position + Vector2(randf_range(-3000,3000),0)

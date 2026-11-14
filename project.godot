@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Marry"
-run/main_scene="uid://bq4it10plxrhi"
+run/main_scene="uid://b0yyu6ofek1rc"
 config/features=PackedStringArray("4.8", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -31,6 +31,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [global_group]
 
 player=""
+kills=""
 
 [gui]
 

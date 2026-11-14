@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cd1u0c0aa2ia6" path="res://assets/Mask group (2).png" id="2_7qtot"]
 [ext_resource type="Texture2D" uid="uid://cbip34iovqgp7" path="res://assets/Mask group (3).png" id="3_cu7b3"]
 [ext_resource type="Texture2D" uid="uid://bnqm18o4ai7as" path="res://assets/Mask group (4).png" id="4_pe30c"]
+[ext_resource type="AudioStream" uid="uid://ddwetel2wi4uk" path="res://audio/horror_female_ghostl_#4-1794663605302.mp3" id="6_uro1f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu7b3"]
 atlas = ExtResource("1_iqfr2")
@@ -88,3 +89,6 @@ frame_progress = 0.30359414
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112482314]
 position = Vector2(-11.902618, -25.922363)
 shape = SubResource("CapsuleShape2D_0mhri")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=121412891]
+stream = ExtResource("6_uro1f")

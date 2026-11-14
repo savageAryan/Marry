@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dxnhhn3yf0lhy" path="res://assets/cloud2.png" id="8_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://dms4bawiltkqg" path="res://assets/cloud3.png" id="9_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://p4650mwojya4" path="res://assets/cloud1.png" id="10_w7kh3"]
-[ext_resource type="AudioStream" uid="uid://ino3bqpsul6l" path="res://audio/ElevenLabs_Eerie_piano_notes_played_in_a_slow,_haunting_cadence,_resonating_with_sadness.mp3" id="11_e3hyu"]
+[ext_resource type="AudioStream" uid="uid://ddwetel2wi4uk" path="res://audio/horror_female_ghostl_#4-1794663605302.mp3" id="11_e3hyu"]
+[ext_resource type="AudioStream" uid="uid://dinphrepq3v08" path="res://audio/horror_kill_sound_fo_#1-1794663765446.mp3" id="12_q5onr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3hyu"]
 atlas = ExtResource("8_7r4gi")
@@ -138,6 +139,42 @@ position = Vector2(-810.976, -977.17395)
 rotation = 0.17594242
 sprite_frames = SubResource("SpriteFrames_jhx03")
 
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=293840176]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(26685.564, -897.5117)
+rotation = 0.19123757
+sprite_frames = SubResource("SpriteFrames_xo05s")
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=1828949167]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(24506.578, -487.51025)
+rotation = 0.19123757
+sprite_frames = SubResource("SpriteFrames_xo05s")
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=1740210498]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(20378.395, -440.65454)
+rotation = 0.19123757
+sprite_frames = SubResource("SpriteFrames_xo05s")
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=1888977931]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(22383.49, -1354.3693)
+rotation = 0.0667988
+sprite_frames = SubResource("SpriteFrames_o8fc1")
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=1487475569]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(7102.0273, -534.7589)
+rotation = 0.0667988
+sprite_frames = SubResource("SpriteFrames_o8fc1")
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="ColorRect/cloud" unique_id=372357270]
+modulate = Color(1, 1, 1, 0.8392157)
+position = Vector2(16394.795, -897.5187)
+rotation = 0.17594242
+sprite_frames = SubResource("SpriteFrames_jhx03")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1358082396]
 tile_map_data = PackedByteArray("AADo/xYAAAAYAAAAAAABABYAAAAxAAAAAADf/xYAAAAbAAAAAAD2/xYAAAAyAAAAAAANABYAAAAbAAAAAAAkABYAAAAyAAAAAAA4ABYAAAAbAAAAAABPABYAAAAyAAAAAABiABcAAAAbAAAAAAB5ABcAAAAyAAAAAACQABgAAAAbAAAAAACnABgAAAAyAAAAAAC/ABgAAAAyAAAAAADXABgAAAAyAAAAAADvABgAAABKAAAAAAAqARgAAAAAAAAAAABDARgAAAAbAAAAAABaARgAAAAyAAAAAABxARgAAAAbAAAAAACIARgAAAAyAAAAAACfARkAAAAbAAAAAAC2ARkAAAAyAAAAAADNARkAAAAbAAAAAADkARkAAAAyAAAAAAD7ARoAAAAbAAAAAAASAhoAAAAyAAAAAAApAhsAAAAbAAAAAABAAhsAAAAyAAAAAABXAhsAAAAbAAAAAABuAhsAAAAyAAAAAACGAhsAAABKAAAAAADG/xYAAAAAAAAAAAC+AhwAAAAAAAAAAADXAhwAAAAbAAAAAADuAhwAAAAyAAAAAAAFAxwAAAAbAAAAAAAcAxwAAAAyAAAAAAAzAx0AAAAbAAAAAABKAx0AAAAyAAAAAABiAx0AAAAyAAAAAAB5Ax0AAABKAAAAAACrAx0AAAAAAAAAAADEAx0AAAAbAAAAAADbAx0AAAAyAAAAAADzAx0AAAAyAAAAAAAKBB4AAAAbAAAAAAAhBB8AAAAbAAAAAAA4BB8AAAAyAAAAAABPBB8AAAAbAAAAAABmBB8AAAAyAAAAAAB9BCAAAAAbAAAAAACUBCAAAAAyAAAAAACrBCEAAAAbAAAAAADCBCEAAAAbAAAAAADZBCIAAAAbAAAAAADwBCIAAAAyAAAAAAAHBSMAAAAbAAAAAAAeBSMAAAAyAAAAAAA2BSMAAABKAAAAAABkBSQAAAAAAAAAAAB9BSQAAAAbAAAAAACUBSQAAAAyAAAAAACrBSQAAAAbAAAAAADCBSQAAAAyAAAAAADZBSUAAAAbAAAAAADwBSUAAAAyAAAAAAAHBiUAAAAbAAAAAAAeBiUAAAAyAAAAAAA2BiUAAABKAAAAAAA=")
 tile_set = SubResource("TileSet_uro1f")
@@ -156,73 +193,73 @@ limit_bottom = 400
 
 [node name="ui" parent="CanvasLayer" unique_id=313804619 instance=ExtResource("3_4wyf3")]
 
-[node name="Human" parent="." unique_id=737580488 instance=ExtResource("4_k0juu")]
+[node name="Human" parent="." unique_id=737580488 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty" parent="." unique_id=373984600 instance=ExtResource("6_qfnet")]
+[node name="kitty" parent="." unique_id=373984600 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(491.95483, 115.729126)
 collision_layer = 4
 
-[node name="ratty" parent="." unique_id=199383234 instance=ExtResource("7_i7141")]
+[node name="ratty" parent="." unique_id=199383234 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(1032.9059, 138.42017)
 collision_layer = 8
 
-[node name="Human2" parent="." unique_id=1397373150 instance=ExtResource("4_k0juu")]
+[node name="Human2" parent="." unique_id=1397373150 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty2" parent="." unique_id=1004447449 instance=ExtResource("6_qfnet")]
+[node name="kitty2" parent="." unique_id=1004447449 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(6938.7207, 90.34827)
 collision_layer = 4
 
-[node name="ratty2" parent="." unique_id=2026456656 instance=ExtResource("7_i7141")]
+[node name="ratty2" parent="." unique_id=2026456656 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(7479.6714, 113.03931)
 collision_layer = 8
 
-[node name="Human3" parent="." unique_id=1845958585 instance=ExtResource("4_k0juu")]
+[node name="Human3" parent="." unique_id=1845958585 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty3" parent="." unique_id=452037018 instance=ExtResource("6_qfnet")]
+[node name="kitty3" parent="." unique_id=452037018 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(8715.389, 90.34827)
 collision_layer = 4
 
-[node name="ratty3" parent="." unique_id=83714786 instance=ExtResource("7_i7141")]
+[node name="ratty3" parent="." unique_id=83714786 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(9256.34, 113.03931)
 collision_layer = 8
 
-[node name="Human4" parent="." unique_id=1573720126 instance=ExtResource("4_k0juu")]
+[node name="Human4" parent="." unique_id=1573720126 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty4" parent="." unique_id=1567436795 instance=ExtResource("6_qfnet")]
+[node name="kitty4" parent="." unique_id=1567436795 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(12281.415, 90.34802)
 collision_layer = 4
 
-[node name="ratty4" parent="." unique_id=413523482 instance=ExtResource("7_i7141")]
+[node name="ratty4" parent="." unique_id=413523482 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(12822.366, 113.03906)
 collision_layer = 8
 
-[node name="Human5" parent="." unique_id=1987140981 instance=ExtResource("4_k0juu")]
+[node name="Human5" parent="." unique_id=1987140981 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty5" parent="." unique_id=1482489077 instance=ExtResource("6_qfnet")]
+[node name="kitty5" parent="." unique_id=1482489077 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(16748.465, 77.65759)
 collision_layer = 4
 
-[node name="ratty5" parent="." unique_id=230555415 instance=ExtResource("7_i7141")]
+[node name="ratty5" parent="." unique_id=230555415 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(17289.418, 100.34863)
 collision_layer = 8
 
-[node name="Human6" parent="." unique_id=916141263 instance=ExtResource("4_k0juu")]
+[node name="Human6" parent="." unique_id=916141263 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty6" parent="." unique_id=917670315 instance=ExtResource("6_qfnet")]
+[node name="kitty6" parent="." unique_id=917670315 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(19832.25, 191.87195)
 collision_layer = 4
 
-[node name="ratty6" parent="." unique_id=1380803103 instance=ExtResource("7_i7141")]
+[node name="ratty6" parent="." unique_id=1380803103 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(20373.203, 214.56299)
 collision_layer = 8
 
-[node name="Human7" parent="." unique_id=1839697133 instance=ExtResource("4_k0juu")]
+[node name="Human7" parent="." unique_id=1839697133 groups=["kills"] instance=ExtResource("4_k0juu")]
 
-[node name="kitty7" parent="." unique_id=1629245448 instance=ExtResource("6_qfnet")]
+[node name="kitty7" parent="." unique_id=1629245448 groups=["kills"] instance=ExtResource("6_qfnet")]
 position = Vector2(23423.656, 179.18152)
 collision_layer = 4
 
-[node name="ratty7" parent="." unique_id=565977447 instance=ExtResource("7_i7141")]
+[node name="ratty7" parent="." unique_id=565977447 groups=["kills"] instance=ExtResource("7_i7141")]
 position = Vector2(23964.61, 201.87256)
 collision_layer = 8
 
@@ -327,6 +364,9 @@ shape = SubResource("RectangleShape2D_w7kh3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1238885242]
 stream = ExtResource("11_e3hyu")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=508264591]
+stream = ExtResource("12_q5onr")
 
 [connection signal="dying" from="Human" to="." method="_on_human_dying"]
 [connection signal="dying" from="kitty" to="." method="_on_kitty_dying"]

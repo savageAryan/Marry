@@ -44,8 +44,8 @@ func find_nearest_kill():
 	for kill in kills:
 		if is_instance_valid(kill):
 			kill.get_node("AnimatedSprite2D").modulate = Color(1.0, 1, 1, 1.0)
-		if closekill != null:
-			kill.get_node("AnimatedSprite2D").modulate = Color(0.911, 0.0, 0.0, 1.0)
+		if is_instance_valid(closekill):
+			closekill.get_node("AnimatedSprite2D").modulate = Color(0.911, 0.0, 0.0, 1.0)
 			
 	return closekill
 func dead():
@@ -67,15 +67,15 @@ func run(delta):
 	if direction.x < 0:
 		animated_sprite_2d.flip_h = true
 	velocity.x = direction.x * running_speed
-	if global_position.distance_to(marry.global_position) > 3700:
-		find_target()
 	if global_position.distance_to(marry.global_position) < 1200:
+		var closest = find_nearest_kill()
 		if Input.is_action_just_pressed("enter"):
-			var closest = find_nearest_kill()
+			
 			if closest == self:
 				state = states.dead
 	else:
 		find_target()
+	
 	move_and_slide()
 func find_target():
 	target = global_position + Vector2(randf_range(-3000,3000),0)

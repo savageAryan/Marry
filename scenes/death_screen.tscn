@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c0gurdp8lpji1" path="res://scripts/death_screen.gd" id="1_mqh5l"]
 [ext_resource type="Texture2D" uid="uid://t2lirdigrp8a" path="res://assets/title.png" id="1_uyutr"]
 [ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="2_dwo6e"]
+[ext_resource type="AudioStream" uid="uid://ddwetel2wi4uk" path="res://audio/horror_female_ghostl_#4-1794663605302.mp3" id="4_7ns25"]
 
 [node name="death screen" type="Control" unique_id=1777731316]
 layout_mode = 3
@@ -56,5 +57,20 @@ theme_override_fonts/font = ExtResource("2_dwo6e")
 theme_override_font_sizes/font_size = 56
 text = "HEhe! nEveR Miind!"
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1594270967]
+stream = ExtResource("4_7ns25")
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=1632292441]
+modulate = Color(1, 1, 1, 0.19215687)
+layout_mode = 0
+offset_left = 296.67273
+offset_top = 528.18036
+offset_right = 895.6727
+offset_bottom = 607.18036
+theme_override_fonts/font = ExtResource("2_dwo6e")
+theme_override_font_sizes/font_size = 51
+text = "AS I SAID NO HAPPY ENDING FOR EVIL!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://p4650mwojya4" path="res://assets/cloud1.png" id="10_w7kh3"]
 [ext_resource type="AudioStream" uid="uid://ddwetel2wi4uk" path="res://audio/horror_female_ghostl_#4-1794663605302.mp3" id="11_e3hyu"]
 [ext_resource type="AudioStream" uid="uid://dinphrepq3v08" path="res://audio/horror_kill_sound_fo_#1-1794663765446.mp3" id="12_q5onr"]
+[ext_resource type="AudioStream" uid="uid://byo2duj8hwvfi" path="res://audio/simplesound-horror-piano-443326 (1).mp3" id="13_jhx03"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3hyu"]
 atlas = ExtResource("8_7r4gi")
@@ -89,7 +90,7 @@ script = ExtResource("1_71j4m")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=138711818]
 offset_left = -1192.9043
 offset_top = -1725.9055
-offset_right = -1119.1451
+offset_right = -1114.6266
 offset_bottom = -1685.9055
 scale = Vector2(391.32462, 67.17936)
 color = Color(0.3222636, 0.16669264, 0.16638601, 1)
@@ -362,11 +363,15 @@ collision_mask = 0
 position = Vector2(3.0264893, 3.9379272)
 shape = SubResource("RectangleShape2D_w7kh3")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1238885242]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=496711552]
 stream = ExtResource("11_e3hyu")
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=508264591]
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="." unique_id=2006608107]
 stream = ExtResource("12_q5onr")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer" parent="." unique_id=1623745811]
+stream = ExtResource("13_jhx03")
+autoplay = true
 
 [connection signal="dying" from="Human" to="." method="_on_human_dying"]
 [connection signal="dying" from="kitty" to="." method="_on_kitty_dying"]

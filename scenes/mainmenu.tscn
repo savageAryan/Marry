@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ir87op5p7no3" path="res://scripts/mainmenu.gd" id="1_natt5"]
 [ext_resource type="AudioStream" uid="uid://cybya5evnx35e" path="res://audio/Creepy,_atmospheric__#1-1794658481202.mp3" id="3_r3g3c"]
 [ext_resource type="AudioStream" uid="uid://pnflswpmgmol" path="res://audio/Dark_cinematic_myste_#1-1794658814500.mp3" id="4_3vvtq"]
+[ext_resource type="FontFile" uid="uid://cyfkpbv1jdprn" path="res://assets/Blood Victim Zombie.ttf" id="5_s5g8n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w7kh3"]
 load_path = "res://.godot/imported/Mask group (6).png-608155259d85dc54335898da45662ce2.ctex"
@@ -60,6 +61,14 @@ stream = ExtResource("3_r3g3c")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1607878880]
 stream = ExtResource("4_3vvtq")
+
+[node name="Label" type="Label" parent="." unique_id=775762756]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_s5g8n")
+theme_override_font_sizes/font_size = 60
+text = "NO HAPPY ENDING FOR EVIL!"
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byo2duj8hwvfi"
+path="res://.godot/imported/simplesound-horror-piano-443326 (1).mp3-a6a7e47438fe952500caf22cb42f057b.mp3str"
+
+[deps]
+
+source_file="res://audio/simplesound-horror-piano-443326 (1).mp3"
+dest_files=["res://.godot/imported/simplesound-horror-piano-443326 (1).mp3-a6a7e47438fe952500caf22cb42f057b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
